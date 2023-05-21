@@ -39,3 +39,6 @@ fetch('http://localhost:3000/user/', {
   console.error(error);
   alert('데이터 요청에 실패했습니다.'); // 로그인 요청 실패 시 알림 표시
 }); 
+
+
+
