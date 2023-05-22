@@ -67,3 +67,15 @@ export async function deleteBoard(req, res){
     await adminRepository.deleteboard(post_id)
     res.sendStatus(204)
 }
+
+// 메인페이지 카운팅 추가
+
+export async function countMain(req, res) {
+    console.log('----------')
+    const countUser = await adminRepository.count();
+    console.log(countUser)
+    if(!countUser){
+        return res.status(401).json({ error: 'Invalid userid' });
+    }
+    return res.status(200).json({countUser})
+}

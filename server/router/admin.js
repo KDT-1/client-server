@@ -14,4 +14,7 @@ router.get('/board-read1', adminController.readBoard)
 router.post('/html5-editor', adminController.newBoard);
 router.delete('/board-read1', adminController.deleteBoard)
 router.delete('/board', adminController.deleteBoard)
+router.get('/index', adminController.countMain)
 export default router;
+
+

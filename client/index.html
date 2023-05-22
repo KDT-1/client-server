@@ -223,10 +223,10 @@
 		<!-- <script src="vendors/scripts/dashboard3.js"></script> -->
 		
 		<script>
-            fetch('http://localhost:3000/count')
+            fetch('http://localhost:3000/index')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('user-count').innerText = data.user_count;
+                    document.getElementById('user-count').innerText = data.countUser;
                 })
                 .catch(error => {
                     console.error('Error:', error);

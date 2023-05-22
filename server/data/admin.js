@@ -49,3 +49,12 @@ export async function deleteboard(post_id){
     return db.execute('delete from board where post_id=?', [post_id])
     .then((result) => console.log(result[0]))
 }
+
+
+// 메인 페이지에 카운팅하기
+export async function count() {
+    return db.execute('SELECT COUNT(*) AS count FROM user')
+    .then((result) =>result[0][0].count)
+    .catch(err => console.log(err))
+}
+
