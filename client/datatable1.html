@@ -156,19 +156,17 @@
 						<div class="row">
 							<h4 class="col-md-6 col-sm-12">Data Table</h4>
 							<div class="col-md-6 col-sm-12 text-right" id="btn-delete">
-								<a
+								<button
 										class="btn btn-primary dropdown-toggle"
-										href="#"
-										role="button"
-										data-toggle="dropdown"
 										id="btn-delete-a"
+										onclick="window.open('./addUser.html')"
 									>
-										삭제
-									</a>
+										추가
+									</button>
 							</div>
 						</div>
 						<div class="pb-20">
-							<table class="checkbox-datatable table nowrap">
+							<table class="checkbox-datatable table nowrap" id="userList">
 								<thead>
 									<tr>
 										<th>
@@ -184,40 +182,13 @@
 										</th>
 										<th>ID</th>
 										<th>Name</th>
-										<th>휴대폰 번호</th>
 										<th>보호자 연락처1</th>
 										<th>보호자 연락처2</th>
+										<th>휴대폰 번호</th>
 									</tr>
 								</thead>
-								<tbody id="userList">
-									<!-- <tr>
-										<td></td>
-									</tr> -->
-									<!-- <tr>
-										<td></td>
-										<td>Tiger Nixon</td>
-										<td>김사과</td>
-										<td>010-0000-0000</td>
-										<td>010-1111-1111</td>
-										<td>N/A</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Angelica Ramos</td>
-										<td>김사과</td>
-										<td>010-0000-0000</td>
-										<td>010-1111-1111</td>
-										<td>N/A</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Ashton Cox</td>
-										<td>김사과</td>
-										<td>010-0000-0000</td>
-										<td>010-1111-1111</td>
-										<td>N/A</td>
-									</tr> -->
-									
+								<tbody>
+																		
 								</tbody>
 							</table>
 						</div>

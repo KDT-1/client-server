@@ -84,7 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
             let tableData2 = document.createElement('td');
             let tableData3 = document.createElement('td');
             let tableData4 = document.createElement('td');
-            
+            // checkbox 생성
+            tableData0.className = 'dt-body-center';
+            let checkboxDiv = document.createElement('div');
+            checkboxDiv.className = 'dt-checkbox';
+            let checkboxInput = document.createElement('input');
+            checkboxInput.type = 'checkbox';
+            checkboxInput.name = 'id[]';
+            let checkboxLabel = document.createElement('span');
+            checkboxLabel.className = 'dt-checkbox-label';
+            checkboxDiv.appendChild(checkboxInput);
+            checkboxDiv.appendChild(checkboxLabel);
+            tableData0.appendChild(checkboxDiv);
+            checkboxInput.addEventListener('change', ()=>{
+              const post_id = data.result[i].post_id
+              postIds.push(post_id)
+            }
+            )
             // tableData0.classList().add(" dt-body-center");
             tableRow.appendChild(tableData0);
             tableData1.textContent = data.result[i].category;
